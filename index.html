@@ -1,80 +1,104 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="script.js"></script>
-</head>
-<body>
-    <header class="bg-primary text-white text-center py-5">
-        <h1 class="animate__animated animate__fadeInDown">Bienvenue sur mon Portfolio</h1>
-        <p class="lead animate__animated animate__fadeInUp">Découvrez mes projets et compétences</p>    
-        <a href="#projects" class="btn btn-light btn-lg animate__animated animate__bounceIn">Voir mes projets</a>
-    </header>   
-    <section id="about" class="container my-5">
-        <h2 class="text-center mb-4">À propos de moi</h2>
-        <p>Je suis un développeur passionné par la création de solutions innovantes. J'aime apprendre de nouvelles technologies et relever des défis.</p>   
-        <p>Mes compétences incluent le développement web, la programmation orientée objet, et la gestion de bases de données.</p>
-        <p>En dehors du codage, j'apprécie la randonnée et la photographie.</p>
-    </section>
-    <section id="projects" class="container my-5"> 
-        <h2 class="text-center mb-4">Mes Projets</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="project1.jpg" class="card-img-top" alt="Projet 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Projet 1</h5>
-                        <p class="card-text">Description du projet 1. Un projet qui démontre mes compétences en développement web.</p>
-                        <a href="#" class="btn btn-primary">Voir le projet</a> 
+    <!doctype html>
+    <html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Mon Portfolio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header class="bg-primary text-white text-center py-5">
+            <h1 class="animate__animated animate__fadeInDown">Bienvenue sur mon Portfolio</h1>
+            <p class="lead animate__animated animate__fadeInUp">Découvrez mes projets et compétences</p>    
+            <a href="#projects" class="btn btn-light btn-lg animate__animated animate__bounceIn">Voir mes projets</a>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Mon Portfolio</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">À propos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Projets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footer">Footer</a>
+                            </li>
+                        </ul>
                     </div>
-                </div>  
+                </div>
+            </nav>
+        </header>   
+        <section id="about" class="container my-5">
+            <h2 class="text-center mb-4">À propos de moi</h2>
+            <p>Je suis un développeur passionné par la création de solutions innovantes. J'aime apprendre de nouvelles technologies et relever des défis.</p>   
+            <p>Mes compétences incluent le développement web, la programmation orientée objet, et la gestion de bases de données.</p>
+            <p>En dehors du codage, j'apprécie la randonnée et la photographie.</p>
+        </section>
+        <section id="projects" class="container my-5"> 
+            <h2 class="text-center mb-4">Mes Projets</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Projet 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 1</h5>
+                            <p class="card-text">Description du projet 1. Un projet qui démontre mes compétences en développement web.</p>
+                            <a href="#" class="btn btn-primary">Voir le projet</a> 
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 2</h5>
+                            <p class="card-text">Description du projet 2. Un projet qui met en
+        valeur mes compétences en programmation orientée objet.</p>
+                            <a href="#" class="btn btn-primary">Voir le projet</a>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Projet 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 3</h5>
+                            <p class="card-text">Description du projet 3. Un projet qui illustre mes compétences en gestion de bases de données.</p>
+                            <a href="#" class="btn btn-primary">Voir le projet</a>
+                        </div>
+                    </div> 
+                </div>
+            </div>  
+        </section>
+        <footer class="bg-dark text-white text-center py-4">
+            <p>&copy; 2023 Mon Portfolio. Tous droits réservés.</p>
+            <div>
+                <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mr-3"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-github"></i></a>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="project2.jpg" class="card-img-top" alt="Projet 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Projet 2</h5>
-                        <p class="card-text">Description du projet 2. Un projet qui met en
-    valeur mes compétences en programmation orientée objet.</p>
-                        <a href="#" class="btn btn-primary">Voir le projet</a>
-                    </div>
-                </div>  
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="project3.jpg" class="card-img-top" alt="Projet 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Projet 3</h5>
-                        <p class="card-text">Description du projet 3. Un projet qui illustre mes compétences en gestion de bases de données.</p>
-                        <a href="#" class="btn btn-primary">Voir le projet</a>
-                    </div>
-                </div> 
-            </div>
-        </div>  
-    </section>
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2023 Mon Portfolio. Tous droits réservés.</p>
-        <div>
-            <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-white mr-3"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-github"></i></a>
-        </div>
-        <p class="mt-2">Contactez-moi à <a href="mailto:?piedfort.q@outlook.com" class="text-white"> piefort.q@gmail.com</a></p>
-    </footer>
+            <p class="mt-2">Contactez-moi à <a href="mailto:?piedfort.q@outlook.com" class="text-white"> piefort.q@gmail.com</a></p>
+        </footer>
 
-            
-            
-                        
+                
+                
+                            
 
