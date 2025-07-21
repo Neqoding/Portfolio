@@ -1,0 +1,28 @@
+h1 {
+    color:#654321;
+}
+p {
+    font-size:20px;
+}
+#produits-phares {
+    background-color: lightyellow
+}
+.description-specialite {
+    font-style: italic;
+}
+.nouveau-produit {
+    color: orange;
+}
+div > p {
+    border: 2px solid blue;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    p {
+        font-style: normal;
+        color:darkgreen
+    }
+}
