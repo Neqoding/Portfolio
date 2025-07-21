@@ -1,0 +1,10 @@
+const prixUnitaireCroissant = 1.20;
+let stockInitialCroissant = 50;
+let croissantsVendusMatin = 20;
+let croissantsVendusSoir = 15;
+let totalcroissantsVendus = croissantsVendusMatin + croissantsVendusSoir;
+let stockRestantCroissant = stockInitialCroissant - totalcroissantsVendus;
+console.log("Stock initial de croissants : ", stockInitialCroissant);
+console.log("Croissants vendus aujourd'hui : ", totalcroissantsVendus);
+console.log("Stock restant de croissants : ", stockRestantCroissant);
+console.log("Chiffre d'affaires de croissants vendus aujourd'hui : ", totalcroissantsVendus * prixUnitaireCroissant.toFixed(2) + " €");
