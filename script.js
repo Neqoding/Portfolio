@@ -1,9 +1,10 @@
-$(document).ready(function() {
-            new Typed('.animate__animated', {
-                strings: ["Bienvenue sur mon Portfolio", "Découvrez mes projets et compétences"],
-                typeSpeed: 50,
-                backSpeed: 25,
-                loop: true
-            });
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    const h1 = document.querySelector('h1');
+    h1.textContent = 'Bienvenue sur mon portfolio';
+    setTimeout(() => {
+        h1.textContent = 'Je suis Quentin, développeur web';
+        
+    }, 3000);
+});
+
         
