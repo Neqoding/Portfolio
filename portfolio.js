@@ -1,28 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // ... (Ton code précédent pour le changement de titre et le message HTML/CSS)
-
-    // --- Fonctionnalité : Filtrage des projets par catégories ---
-
-    // 1. Sélectionne tous les boutons qui ont l'attribut 'data-filter'.
-    //    Ceci nous donnera une liste de tous tes boutons "Tout", "Développement Web", etc.
+    // --- SÉLECTIONS DES ÉLÉMENTS DU DOM (au début, une seule fois) ---
+    const h1Element = document.querySelector('h1');
+    const messageDiv = document.querySelector('#message_projet_html_css');
     const boutonsDeFiltre = document.querySelectorAll('button[data-filter]');
+    const themeToggleButton = document.querySelector('#toggle-theme'); // Nouveau : sélection du bouton de thème
+    const bodyElement = document.body; // Nouvelle : sélection de l'élément <body>
 
-    // 2. Parcourt chaque bouton de filtre un par un.
-    for (const bouton of boutonsDeFiltre) { // <-- 'bouton' est défini ici, à l'intérieur de la boucle
-        // 3. Pour chaque 'bouton', ajoute un écouteur d'événement 'click'.
-        //    La fonction (callback) ici sera exécutée chaque fois qu'un de ces boutons est cliqué.
-        bouton.addEventListener('click', function() {
-            // 'this' à l'intérieur de cette fonction de rappel fait référence au bouton qui a été cliqué.
-            // On récupère la valeur de l'attribut 'data-filter' de ce bouton spécifique.
-            const categorieSelectionnee = this.getAttribute('data-filter');
-            
-            // Appelle la fonction 'filtrerProjets' que tu as déjà définie,
-            // en lui passant la catégorie récupérée du bouton cliqué.
-            filtrerProjets(categorieSelectionnee);
-        });
+    // --- Fonctionnalité 1 : Changement de titre dynamique ---
+    h1Element.textContent = 'Bienvenue sur mon portfolio';
+    setTimeout(() => {
+        h1Element.textContent = 'Je suis Quentin, développeur web'; 
+    }, 3000);
+    
+    // --- Fonctionnalité 2 : Message de statut du projet HTML/CSS ---
+    const projetHtmlCssReussi = true; 
+    if (projetHtmlCssReussi) {
+        messageDiv.innerHTML = '<p style="color: green; font-weight: bold;">Félicitations ! Mon premier projet HTML/CSS est un succès !</p>';
+    } else {
+        messageDiv.innerHTML = '<p style="color: orange;">Le projet HTML/CSS est en cours de développement...</p>';    
     }
 
-    // --- Définition de la fonction filtrerProjets (doit être définie AVANT d'être appelée) ---
+    // --- Fonctionnalité 3 : Filtrage des projets par catégories (définition) ---
     function filtrerProjets(categorie) {
         const tousLesProjets = document.querySelectorAll('.projet-item');
         
@@ -37,7 +35,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- Appel initial pour afficher tous les projets au chargement de la page ---
-    // Cet appel est important pour que les projets soient visibles au début.
-    filtrerProjets('all'); 
-});
+    // --- Fonctionnalité 4 : Gestion des écouteurs de clic pour les filtres ---
+    for (const bouton of boutonsDeFiltre) {
+        bouton.addEventListener('click', function() {
+            const categorieSelectionnee = this.getAttribute('data-filter');
+            filtrerProjets(categorieSelectionnee);
+        });
+    }
+
+    // --- Fonctionnalité 5 : Bascule du thème (Clair/Sombre) ---
+    // Ajout de l'écouteur de clic sur le bouton de bascule de thème
+    themeToggleButton.addEventListener('click', function() {
+        bodyElement.classList.toggle('dark-theme'); // Bascule la classe 'dark-theme' sur le <body>
+        
+        // Met à jour le texte du bouton en fonction du thème actuel
+        if (bodyElement.classList.contains('dark-theme')) {
+            themeToggleButton.textContent = 'Changer le thème (Clair)';
+        } else {
+            themeToggleButton.textContent = 'Changer le thème (Sombre)';
+        }
+    });
+
+    // --- Appels initiaux (au chargement de la page) ---
+    filtrerProjets('all'); // Affiche tous les projets par défaut
+
+}); // Fin de DOMContentLoaded
